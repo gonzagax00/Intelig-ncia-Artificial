@@ -1,6 +1,7 @@
 # Intelig-ncia-Artificial
 Disciplina de Inteligência Artificial 6B - Victor Gonzaga
 
+________________________________________________________
 Exercícios de Lógica em Python
 
 50 exercícios básicos de Python pra praticar:
@@ -18,3 +19,5 @@ Cada exercício tá comentado e separado.
 
 Tecnologias
 Python 3 + Google Colab
+________________________________________________________
+
