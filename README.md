@@ -55,3 +55,46 @@ Subplots e múltiplas séries no mesmo gráfico
 Personalização (cores, estilos de linha, grades, legendas, anotações de texto)
 Gráficos avançados: dispersão 3D, barras empilhadas, barras horizontais, exportação em PDF
 ________________________________________________________
+
+Classificação do Dataset Iris com SVM
+
+Atividade de reavaliação do dataset Iris, utilizando dados obtidos diretamente do Kaggle e um modelo de classificação desenvolvido exclusivamente com o algoritmo Support Vector Machine (SVM).
+
+Objetivo
+- Usar dados externos obtidos do Kaggle (sem load_iris()).
+- Realizar a Análise Exploratória de Dados (EDA).
+- Desenvolver um modelo de classificação usando apenas SVM.
+- Avaliar o desempenho com métricas clássicas.
+- Documentar todo o fluxo de trabalho de Machine Learning.
+
+Dataset
+Iris Species — dataset obrigatório da atividade, anexado diretamente ao notebook a partir da própria página no Kaggle.
+
+Tecnologias utilizadas:
+- Python 3
+- pandas / numpy
+- matplotlib / seaborn
+- scikit-learn (SVC, StandardScaler, train_test_split, cross_val_score, métricas de avaliação)
+
+Estrutura do notebook
+- Setup
+- Load Dataset
+- Initial Inspection (Análise Exploratória de Dados)
+- Data Preparation
+- Train/Test Split
+- Normalization
+- Train SVM Model
+- Prediction
+- Evaluation
+- Visualization
+
+Modelo
+- Algoritmo: SVC (Support Vector Classifier)
+- Kernel: RBF
+- Parâmetros: C=1.0, gamma="scale"
+
+Avaliação
+- Acurácia
+- Classification report (precision, recall, f1-score)
+- Matriz de confusão
+- Validação cruzada (5 folds)
