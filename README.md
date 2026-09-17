@@ -98,3 +98,32 @@ Avaliação
 - Classification report (precision, recall, f1-score)
 - Matriz de confusão
 - Validação cruzada (5 folds)
+
+________________________________________________________
+
+Esse notebook (summit-dupla-intelig-ncia-artificial.ipynb) cobre a Etapa 1 da atividade — escolha do dataset, import e avaliação do banco, tratamento de dados ausentes e encoding. Ainda não tem as etapas de treino do SVM. Resumo do que ele faz, célula por célula:
+
+1. Import do dataset
+
+Importa pandas, numpy, matplotlib e seaborn.
+Carrega o glass.csv (adicionado via painel de Input do Kaggle) com pd.read_csv() e mostra as 5 primeiras linhas com df.head().
+
+2. Avaliação do banco de dados
+
+df.info(): confirma que são 214 registros, 10 colunas, nenhum valor nulo, sendo 9 atributos float64 e a Type (alvo) int64.
+df.describe(): estatísticas descritivas — nota que o Silício (Si) domina os valores, que Bário (Ba) é zero em mais de 75% das amostras, possíveis outliers em K e Ca, e que as escalas são bem diferentes entre si (justificando padronização mais adiante).
+
+3. Tratamento de dados ausentes
+
+Conta nulos por coluna (isnull().sum()) e linhas duplicadas (duplicated().sum()).
+Resultado: nenhum valor ausente, mas 1 linha duplicada foi identificada (o código só trata nulos com mediana — a linha duplicada é citada no texto mas não chega a ser removida na célula).
+
+4. Tratamento de encoding
+
+Explica que os atributos preditores já são numéricos, então não precisam de encoding.
+Mas a Type (alvo) tem classes não sequenciais (1,2,3,5,6,7 — falta o 4), então aplica LabelEncoder, criando a coluna Type_encoded (0 a 5) e imprime a correspondência entre valor original e codificado.
+
+Complemento visual (extra da etapa 2)
+
+Gráfico de barras (countplot) da distribuição de Type, para visualizar o desbalanceamento das classes.
+Mapa de calor (heatmap) de correlação entre os 9 atributos numéricos (excluindo Type/Type_encoded).
